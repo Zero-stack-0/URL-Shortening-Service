@@ -1,0 +1,271 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Webservice/Webservice.csproj": {}
+  },
+  "projects": {
+    "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Data/Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Data/Data.csproj",
+        "projectName": "Data",
+        "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Data/Data.csproj",
+        "packagesPath": "/Users/shubhamjangid/.nuget/packages/",
+        "outputPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shubhamjangid/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj": {
+                "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj",
+        "packagesPath": "/Users/shubhamjangid/.nuget/packages/",
+        "outputPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shubhamjangid/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Service/Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Service/Service.csproj",
+        "projectName": "Service",
+        "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Service/Service.csproj",
+        "packagesPath": "/Users/shubhamjangid/.nuget/packages/",
+        "outputPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shubhamjangid/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Data/Data.csproj": {
+                "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Data/Data.csproj"
+              },
+              "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj": {
+                "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Webservice/Webservice.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Webservice/Webservice.csproj",
+        "projectName": "Webservice",
+        "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Webservice/Webservice.csproj",
+        "packagesPath": "/Users/shubhamjangid/.nuget/packages/",
+        "outputPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Webservice/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/shubhamjangid/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj": {
+                "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj"
+              },
+              "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Service/Service.csproj": {
+                "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Service/Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
