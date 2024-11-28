@@ -9,3 +9,4 @@
 /Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/obj/Debug/net8.0/refint/Entities.dll
 /Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/obj/Debug/net8.0/Entities.pdb
 /Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/obj/Debug/net8.0/ref/Entities.dll
+/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/obj/Debug/net8.0/Entities.sourcelink.json
