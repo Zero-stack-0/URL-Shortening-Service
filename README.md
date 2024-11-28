@@ -33,3 +33,19 @@ Clone this repository to your local machine using Git:
 ```bash
 git clone https://github.com/your-username/url-shortening-api.git
 cd url-shortening-api
+### 2. Configure SQL Server Connection String
+
+The project uses SQL Server to store data. You need to update the connection string in the `appsettings.json` file.
+
+- Open the `appsettings.json` file in the root of the project.
+- In the `"ConnectionStrings"` section, update the `DefaultConnection` string to match your local SQL Server setup:
+
+Example:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "AddConnectionStringHere"
+  }
+}
+
