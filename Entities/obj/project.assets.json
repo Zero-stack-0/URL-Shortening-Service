@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj",
+      "projectUniqueName": "/Users/shubhamjangid/Desktop/Projects/URL-Shortening-Service/Entities/Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/Entities.csproj",
+      "projectPath": "/Users/shubhamjangid/Desktop/Projects/URL-Shortening-Service/Entities/Entities.csproj",
       "packagesPath": "/Users/shubhamjangid/.nuget/packages/",
-      "outputPath": "/Users/shubhamjangid/Desktop/Projects/UrlShortening/Entities/obj/",
+      "outputPath": "/Users/shubhamjangid/Desktop/Projects/URL-Shortening-Service/Entities/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/shubhamjangid/.nuget/NuGet/NuGet.Config"
