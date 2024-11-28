@@ -33,6 +33,8 @@ Clone this repository to your local machine using Git:
 ```bash
 git clone https://github.com/your-username/url-shortening-api.git
 cd url-shortening-api
+```
+
 ### 2. Configure SQL Server Connection String
 
 The project uses SQL Server to store data. You need to update the connection string in the `appsettings.json` file.
@@ -48,4 +50,49 @@ Example:
     "DefaultConnection": "AddConnectionStringHere"
   }
 }
+```
+
+**###3. Install Dependencies**
+Run the following command to restore all required NuGet dependencies:
+```bash
+dotnet restore
+```
+
+**4. Build the Project**
+After restoring the dependencies, build the project using the following command:
+```bash
+dotnet build
+```
+
+**5. Apply Database Migrations**
+
+If you are using Entity Framework Core for data access, run the following command to apply the database migrations and create the necessary tables:
+```bash
+dotnet ef database update
+```
+This command will create the database schema defined in the model.
+
+**6. Run the API Locally**
+Once the project is built, you can run the application locally using the following command:
+```bash
+dotnet run
+```
+By default, the API will be hosted at http://localhost:5000 (or a different port depending on your configuration).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
