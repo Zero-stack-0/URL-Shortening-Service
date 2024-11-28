@@ -22,6 +22,18 @@ namespace Entities.Model
         public DateTime? UpdatedDate { get; set; }
         public bool IsDeleted { get; set; }
 
+        public void Delete()
+        {
+            IsDeleted = true;
+            UpdatedDate = DateTime.UtcNow;
+        }
+
+        public void Update(string url)
+        {
+            Url = url;
+            UpdatedDate = DateTime.UtcNow;
+        }
+
         public void Accessed()
         {
             AccessCount += 1;

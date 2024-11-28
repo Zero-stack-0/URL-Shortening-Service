@@ -45,24 +45,118 @@ public class UrlShortService : IUrlShortService
         return GetResponse(urlShortneningRecord, StatusCodes.Status201Created, "Url added succesfully");
     }
 
+    public async Task<ResponseModel> GetByShortCode(string shortCode)
+    {
+        if (string.IsNullOrWhiteSpace(shortCode))
+        {
+            return GetResponse(null, StatusCodes.Status400BadRequest, "short code cannot be empty");
+        }
+
+        var recordByShortCode = await urlRecordRepository.Get(shortCode);
+        if (recordByShortCode is null)
+        {
+            return GetResponse(null, StatusCodes.Status404NotFound, "no url exists with given short code");
+        }
+
+        recordByShortCode.Accessed();
+
+        await urlRecordRepository.Update(recordByShortCode);
+
+        return GetResponse(recordByShortCode, StatusCodes.Status200OK, "Record");
+    }
+
+    public async Task<ResponseModel> Update(string shortCode, string updatedUrl)
+    {
+        if (string.IsNullOrWhiteSpace(shortCode) || string.IsNullOrWhiteSpace(updatedUrl))
+        {
+            return GetResponse(null, StatusCodes.Status400BadRequest, string.IsNullOrWhiteSpace(shortCode) ? "Short code cannot be empty" : "Url cannot be empty");
+        }
+
+        var recordByShortCode = await urlRecordRepository.Get(shortCode);
+        if (recordByShortCode is null)
+        {
+            return GetResponse(null, StatusCodes.Status404NotFound, "no url exists with given short code");
+        }
+
+        var recordByUrl = await urlRecordRepository.GetByUrl(updatedUrl);
+        if (recordByUrl is not null)
+        {
+            return GetResponse(null, StatusCodes.Status404NotFound, "updated url already beign used with short code");
+        }
+
+        recordByShortCode.Update(updatedUrl);
+
+        await urlRecordRepository.Update(recordByShortCode);
+
+        return GetResponse(recordByShortCode, StatusCodes.Status200OK, "updated sucessfully");
+    }
+
+    public async Task<ResponseModel> Delete(string shortCode)
+    {
+        var recordByShortCode = await urlRecordRepository.Get(shortCode);
+        if (recordByShortCode is null)
+        {
+            return GetResponse(null, StatusCodes.Status404NotFound, "no url exists with given short code");
+        }
+
+        recordByShortCode.Delete();
+
+        await urlRecordRepository.Update(recordByShortCode);
+
+        return GetResponse(null, StatusCodes.Status204NoContent, "");
+    }
+
+    public async Task<ResponseModel> GetStats(string shortCode)
+    {
+        if (string.IsNullOrWhiteSpace(shortCode))
+        {
+            return GetResponse(null, StatusCodes.Status400BadRequest, "short code cannot be empty");
+        }
+
+        var recordByShortCode = await urlRecordRepository.Get(shortCode);
+        if (recordByShortCode is null)
+        {
+            return GetResponse(null, StatusCodes.Status404NotFound, "no url exists with given short code");
+        }
+
+        recordByShortCode.Accessed();
+
+        await urlRecordRepository.Update(recordByShortCode);
+
+        return GetResponse(recordByShortCode, StatusCodes.Status200OK, "Record", true);
+    }
+
     private string GetShortCode()
     {
         return Guid.NewGuid().ToString().Substring(0, 6); ;
     }
 
-    private ResponseModel GetResponse(UrlShortneningRecord? record, int statusCodes, string message)
+    private ResponseModel GetResponse(UrlShortneningRecord? record, int statusCode, string message, bool includeAccessCount = false)
     {
-        return new ResponseModel()
+        if (record is null)
         {
-            Data = record is null ? null : new UrlShortResponse()
+            return new ResponseModel
             {
-                Id = record.Id,
-                Url = record.Url,
-                CreatedDate = record.CreateDate,
-                UpdatedDate = record.UpdatedDate,
-                ShortCode = record.ShortCode
-            },
-            StatusCode = statusCodes,
+                Data = null,
+                StatusCode = statusCode,
+                Message = message
+            };
+        }
+
+        var responseData = new
+        {
+            record.Id,
+            record.Url,
+            record.CreateDate,
+            record.UpdatedDate,
+            record.ShortCode,
+            AccessCount = includeAccessCount ? record.AccessCount : (int?)null
+        };
+
+        return new ResponseModel
+        {
+            Data = responseData,
+            StatusCode = statusCode,
             Message = message
         };
     }
