@@ -1,3 +1,4 @@
+using Entities.Model;
 using Microsoft.EntityFrameworkCore;
 namespace Data
 {
@@ -10,5 +11,7 @@ namespace Data
         {
 
         }
+
+        public DbSet<UrlShortneningRecord> UrlShortneningRecord { get; set; }
     }
 }
